@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroLain | Zona Interactiva</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">NeuroLain</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sistema-nervioso.html">Sistema Nervioso</a></li>
+                <li><a href="salud-mental.html">Salud Mental</a></li>
+                <li><a href="referencias.html">Referencias</a></li>
+                <li><a href="interactivo.html" class="active">Interactivo</a></li>
+            </ul>
+        </nav>
+
+        <button id="toggleTheme" style="background: transparent; border: 1px solid #fff; color: #fff; padding: 5px 12px; border-radius: 15px; cursor: pointer;">🌙 Modo</button>
+
+    </header>
+
+    <main>
+        <h1>Zona Interactiva</h1>
+
+
+        <section class="seccion-mitos">
+            <h2>Mitos vs. Realidades</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 25px;">Toca o haz clic en las tarjetas para descubrir la verdad científica.</p>
+
+            <div class="mitos-container">
+                <div class="mitoscarta" onclick="this.classList.toggle('flipped')">
+                    <div class="carta-inner">
+                        <div class="carta-front">
+                            <h3> Mito</h3>
+                            <p>"Solo utilizamos el 10% de nuestro cerebro."</p>
+                        </div>
+                        <div class="carta-back">
+                            <h3> Realidad</h3>
+                            <p>Usamos prácticamente el 100% de nuestro cerebro a lo largo del día, incluso al dormir.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mitoscarta" onclick="this.classList.toggle('flipped')">
+                    <div class="carta-inner">
+                        <div class="carta-front">
+                            <h3> Mito</h3>
+                            <p>"El cerebro adulto no crea nuevas neuronas."</p>
+                        </div>
+                        <div class="carta-back">
+                            <h3> Realidad</h3>
+                            <p>Mediante la neurogénesis, zonas como el hipocampo sí generan neuronas nuevas gracias al ejercicio.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mitoscarta" onclick="this.classList.toggle('flipped')">
+                    <div class="carta-inner">
+                        <div class="carta-front">
+                            <h3> Mito</h3>
+                            <p>"Escuchar música clásica sube el CI automáticamente."</p>
+                        </div>
+                        <div class="carta-back">
+                            <h3> Realidad</h3>
+                            <p>Estimula áreas del cerebro por el disfrute, pero no incrementa la inteligencia de forma directa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUIZ RÁPIDO -->
+        <section class="seccion-quiz bloque-animado">
+            <h2>Quiz Rápido de Neurociencia</h2>
+            <form id="quizForm">
+                <div class="pregunta">
+                    <p><strong>1. ¿Qué neurotransmisor actúa como "freno natural" contra la ansiedad?</strong></p>
+                    <label><input type="radio" name="p1" value="0"> Dopamina</label><br>
+                    <label><input type="radio" name="p1" value="1"> GABA</label><br>
+                    <label><input type="radio" name="p1" value="0"> Noradrenalina</label>
+                </div>
+
+                <div class="pregunta">
+                    <p><strong>2. ¿Qué estructura es el principal centro de procesamiento emocional?</strong></p>
+                    <label><input type="radio" name="p2" value="1"> Sistema Límbico</label><br>
+                    <label><input type="radio" name="p2" value="0"> Cerebelo</label><br>
+                    <label><input type="radio" name="p2" value="0"> Médula Espinal</label>
+                </div>
+
+                <div class="pregunta">
+                    <p><strong>3. ¿Qué porcentaje de la energía del cuerpo consume el cerebro?</strong></p>
+                    <label><input type="radio" name="p3" value="0"> 5%</label><br>
+                    <label><input type="radio" name="p3" value="1"> 20%</label><br>
+                    <label><input type="radio" name="p3" value="0"> 50%</label>
+                </div>
+
+                <button type="button" class="btn-quiz" onclick="calcularResultado()">Ver Resultado</button>
+            </form>
+
+            <div id="resultadoQuiz" class="resultado-oculto"></div>
+        </section>
+    </main>
+
+
+<section class="bloque bloque-animado" style="text-align: center; margin-top: 40px;">
+    <h2> Respiración para la Calma</h2>
+    <p>Inhala y exhala siguiendo el ritmo del círculo para equilibrar el sistema nervioso autónomo.</p>
+    
+    <div class="circulo-respiracion-container">
+        <div id="circuloRespiracion" class="circulo-respiracion">Inhala</div>
+    </div>
+</section>
+
+    <section class="bloque" style="text-align: center;">
+    <h2> Explorador del Cerebro Humano</h2>
+    <p>Haz clic en una región para conocer su función principal:</p>
+
+    <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin: 20px 0;">
+        <button class="btn-cerebro" data-info="Lóbulo Frontal: Encargado del razonamiento, la toma de decisiones, la planificación y el control emocional.">Lóbulo Frontal</button>
+        <button class="btn-cerebro" data-info="Lóbulo Parietal: Procesa la información sensorial táctil como la temperatura, el dolor y la presión.">Lóbulo Parietal</button>
+        <button class="btn-cerebro" data-info="Lóbulo Temporal: Clave para la memoria, el reconocimiento facial y la comprensión del lenguaje.">Lóbulo Temporal</button>
+        <button class="btn-cerebro" data-info="Lóbulo Occipital: Responsable del procesamiento e interpretación de la información visual.">Lóbulo Occipital</button>
+        <button class="btn-cerebro" data-info="Cerebelo: Coordina los movimientos finos, la postura y el equilibrio corporal.">Cerebelo</button>
+    </div>
+
+    <div id="infoCerebro" style="background-color: #f0f0f0; padding: 20px; border-radius: 12px; font-weight: bold; color: #333; min-height: 50px; display: flex; align-items: center; justify-content: center;">
+        Selecciona un área para explorar...
+    </div>
+    </section>
+
+    <footer>
+        <p>© 2026 NeuroLain | Proyecto de Ciencia y Tecnología — Creado por hxzuk × ucseit</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

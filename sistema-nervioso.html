@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroLain | Sistema Nervioso</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            NeuroLain
+        </div>
+        <nav>
+
+        <ul>
+
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sistema-nervioso.html" class="active">Sistema Nervioso</a></li>
+                <li><a href="salud-mental.html">Salud Mental</a></li>
+                <li><a href="referencias.html">Referencias</a></li>
+                <li><a href="interactivo.html">Interactivo</a></li>
+       
+        </ul>
+
+        </nav>
+
+            <button id="toggleTheme" style="background: transparent; border: 1px solid #fff; color: #fff; padding: 5px 12px; border-radius: 15px; cursor: pointer;">🌙 Modo</button>
+
+    </header>
+
+    <main>
+    <h1>Sistema Nervioso</h1>
+
+
+        <img src="img/sistema-nervioso.jpg" alt="Ilustración del sistema nervioso humano" class="imagen-animada max-600">
+
+        <section class="seccion-info">
+            <div class="bloque">
+                <h2>1. Organización Anatómica</h2>
+                <p>El sistema nervioso se divide fundamentalmente en dos partes: el <strong>Sistema Nervioso Central (SNC)</strong>, compuesto por el encéfalo y la médula espinal <strong>(nuestro centro de procesamiento)</strong>, y el <strong>Sistema Nervioso Periférico (SNP)</strong>, que conecta al SNC con el resto de los órganos y extremidades.</p>
+            </div>
+
+            <div class="bloque">
+                <h2>2. La Unidad Funcional: La Neurona</h2>
+                <p>La neurona es la célula especializada en recibir, procesar y transmitir información mediante impulsos electroquímicos. A diferencia de otras células, las neuronas son altamente especializadas: tienen dendritas <strong>(receptores)</strong>, un cuerpo celular <strong>(soma)</strong> y un axón <strong>(transmisor)</strong>.</p>
+                
+
+                <img src="img/estructura-neurona-humana.jpg" alt="Estructura de una neurona humana" class="imagen-animada max-400">
+            </div>
+
+            <div class="bloque">
+                <h2>3. Historia y Descubrimientos Clave</h2>
+                <p>El estudio del sistema nervioso evolucionó drásticamente gracias a <strong>Santiago Ramón y Cajal</strong>, quien mediante la tinción de plata demostró que las neuronas son células independientes <strong>(Teoría Neuronal)</strong>, refutando la idea de una red continua.</p>
+            </div>
+
+            <div class="bloque">
+                <h2>4. Datos de Alto Impacto</h2>
+                <ul>
+                    <li><strong>Velocidad de conducción:</strong> Los impulsos nerviosos mielinizados pueden viajar hasta a 120 m/s.</li>
+                    <li><strong>Consumo energético:</strong> Aunque pesa solo el 2% del cuerpo, el cerebro consume cerca del 20% de tu energía total.</li>
+                </ul>
+            </div>
+
+            <div class="bloque">
+                <h2>5. La Sinapsis: El Lenguaje Neuronal</h2>
+                <p>La sinapsis es el proceso de comunicación entre neuronas. No hay un contacto físico directo; en su lugar, existe un pequeño espacio llamado <strong>hendidura sináptica</strong>. Cuando el impulso eléctrico llega al final del axón, libera sustancias químicas llamadas <strong>neurotransmisores</strong>, que saltan el espacio y se unen a la siguiente neurona para transmitir el mensaje.</p>
+            </div>
+
+            <div class="bloque">
+                <h2>6. Sistema Nervioso Autónomo y Somático</h2>
+                <p>El sistema nervioso se clasifica funcionalmente en:</p>
+                <ul>
+                    <li><strong>Sistema Somático:</strong> Controla los movimientos voluntarios y la recepción de información sensorial <strong>(ej: escribir, caminar)</strong>.</li>
+                    <li><strong>Sistema Autónomo:</strong> Regula funciones involuntarias y vitales <strong>(ej: latido del corazón, digestión)</strong>. Se divide a su vez en <em>simpático</em> <strong>(prepara para la acción)</strong> y <em>parasimpático</em> <strong>(promueve el reposo y la recuperación)</strong>.</li>
+                </ul>
+            </div>
+
+            <div class="bloque">
+                <h2>7. Cuidado del Sistema Nervioso</h2>
+                <p>La salud del sistema nervioso depende de factores como la higiene del sueño, una nutrición rica en ácidos grasos <strong>(como omega-3)</strong> y la estimulación cognitiva constante. Enfermedades neurodegenerativas o trastornos del ánimo pueden ocurrir si el equilibrio del sistema se ve afectado, lo que subraya la importancia de la prevención.</p>
+            </div>
+
+            <div class="bloque">
+                <h2>8. Los Neurotransmisores: Mensajeros Químicos</h2>
+                <p>La transmisión sináptica depende de moléculas especializadas. Los más relevantes para el estudio académico son:</p>
+                <ul>
+                    <li><strong>Lóbulo Frontal:</strong> Encargado de funciones ejecutivas, razonamiento, planificación y control motor.</li>
+                    <li><strong>Lóbulo Parietal:</strong> Procesa información sensorial como el tacto, la presión, la temperatura y el dolor.</li>
+                    <li><strong>Lóbulo Temporal:</strong> Especializado en el procesamiento auditivo, la memoria y la comprensión del lenguaje.</li>
+                    <li><strong>Lóbulo Occipital:</strong> El centro principal para el procesamiento de la información visual.</li>
+                </ul>
+            </div> 
+        </section>
+    </main>
+
+    <section class="bloque" style="text-align: center;">
+    <h2:  Test Exprés de Carga Mental</h2>  
+    <p>¿Cómo sientes tu nivel de tensión hoy?</p>
+    
+    <div style="margin: 20px 0;">
+        <label for="rangoEstres">Nivel de tensión (1 al 10): </label>
+        <input type="range" id="rangoEstres" min="1" max="10" value="5" style="width: 60%; max-width: 300px; cursor: pointer;">
+        <span id="valorEstres" style="font-weight: bold; font-size: 1.2rem; margin-left: 10px;">5</span>
+    </div>
+
+    <button id="btnEvaluarEstres" style="padding: 10px 20px; background-color: #000; color: #fff; border: none; border-radius: 20px; cursor: pointer; font-weight: bold;">
+        Evaluar estado
+    </button>
+
+    <div id="mensajeEstres" style="margin-top: 20px; font-weight: bold; display: none; padding: 15px; border-radius: 10px;"></div>
+    </section>
+
+    <script src="script.js"></script>
+
+    <footer>
+        <p>© 2026 NeuroLain | Proyecto de Ciencia y Tecnología — Creado por hxzuk × ucseit</p>
+    </footer>
+
+</body>
+</html>
